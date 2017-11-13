@@ -14,7 +14,7 @@
   shallowParent: 'SHALLOW_PARENT',	//shallow parent property name
   warningAlreadyAssignedF: false,	//if warning should be displayed for already assigned child prototype
   protoMethod: 'assignCreate',		//method of setting prototype - 'proto', 'setPrototypeOf', 'assignCreate'
-  maxRecursion: 500,			//0=disabled, otherwise max depth of recursion to 'detect' circular references
+  maxRecursion: 500,			//0=disabled, otherwise max recursion depth to 'detect' circular references
   childPath:''				//if non-empty, then only specified child reference will be parsed
 }
 ```
