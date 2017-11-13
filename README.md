@@ -31,7 +31,7 @@ let options = {
 ## Deep parent example:
 
 ```js
-let customer={
+let customer = {
   shipping_details: {   street:       'London Road',
                         house_number: '1a',
                         post_code:    'WX1 ABC',
@@ -41,8 +41,8 @@ let customer={
                         }
   },
   billing_details:  {   phone_numbers: {
-			  work: '678'
-			},
+                          work: '678'
+                        },
                         DEEP_PARENT:  'shipping_details' 
   }
 }
@@ -61,25 +61,29 @@ console.log(customer.billing_details.phone_numbers.home);
 * No anchors needed - any key within the object can be a parent (=anchor)
 
 ```js
-let x={
+let x = {
         'default': {
           URL: 'stooges.com',
           throw_pies: true,
-          stooges: {  larry: 'first_stooge',
+          stooges: {
+                      larry: 'first_stooge',
                       moe: 'second_stooge'
-		    }
+          }
         },
         'development': {
           SHALLOW_PARENT: 'default',
           URL: 'stooges.local',
-          stooges: { shemp: 'fourth_stooge' }
+          stooges: {
+                     shemp: 'fourth_stooge'
+          }
         },
         'test': {
           SHALLOW_PARENT: 'default',
           URL: 'test.stooges.qa',
-          stooges: { SHALLOW_PARENT: 'default.stooges',
+          stooges: {
+                     SHALLOW_PARENT: 'default.stooges',
                      larry: 'larrys_stooge'
-		    } 
+          } 
         }
 }
 
