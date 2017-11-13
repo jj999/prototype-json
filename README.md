@@ -55,6 +55,8 @@ console.log(customer.billing_details.phone_numbers.home);
 
 ## Shallow parent example / Yaml-like references in JSON using prototypeJSON:
 
+* No anchors needed - any key within the object can be a parent (=anchor)
+
 ```js
 let x={ 'default': {
           URL: 'stooges.com',
