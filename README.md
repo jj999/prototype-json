@@ -4,10 +4,11 @@
 * supports two types of parent - deep and shallow
 * shallow parent adds YAML-like functionality into native JSON
 
-## usage and additional info:
+## usage and options:
 
-- prototypeJSON(o, options)  - takes two arguments - object name and options; it updates prototypes of object o
-- options and defaults:
+- prototypeJSON(o, options)  - takes two arguments - object name and options
+- returns undefined and updates prototypes of object 'o' based on specified parents
+- options with their defaults:
 ```js
 let options = {
   deepParent: 'DEEP_PARENT',		//deep parent property name
@@ -18,6 +19,8 @@ let options = {
   childPath:''				//if non-empty, then only specified child reference will be parsed
 }
 ```
+
+## Additional information:
 
 - parents can be chained - one parent can point to another parent
 - deep and shallow parents can be combined within the same JSON object
@@ -59,12 +62,12 @@ console.log(customer.billing_details.phone_numbers.home);
 
 ```js
 let x={
-		'default': {
+        'default': {
           URL: 'stooges.com',
           throw_pies: true,
           stooges: {  larry: 'first_stooge',
                       moe: 'second_stooge'
-		  }
+		    }
         },
         'development': {
           SHALLOW_PARENT: 'default',
@@ -76,7 +79,7 @@ let x={
           URL: 'test.stooges.qa',
           stooges: { SHALLOW_PARENT: 'default.stooges',
                      larry: 'larrys_stooge'
-		  } 
+		    } 
         }
 }
 
