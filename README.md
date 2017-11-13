@@ -22,7 +22,7 @@ let options = {
 - parents can be chained - one parent can point to another parent
 - deep and shallow parents can be combined within the same JSON object
 - parents can use 'deep' references with dot - such as 'default.stooges'
- * arrays are supported in parent references - for example 'x.1.b' - will reference 'b' in {x:[ {a:1}, {b:2} ]}
+ - arrays are supported in parent references - for example 'x.1.b' - will reference 'b' in {x:[ {a:1}, {b:2} ]}
 - deep parent will set prototypes in objects inside array as well, but arrays themselves won't have their prototype changed
 
 ## Deep parent example:
@@ -38,7 +38,7 @@ let customer={
                         }
   },
   billing_details:  {   phone_numbers: {
-				work: '678'
+			  work: '678'
 			},
                         DEEP_PARENT:  'shipping_details' 
   }
@@ -58,7 +58,8 @@ console.log(customer.billing_details.phone_numbers.home);
 * No anchors needed - any key within the object can be a parent (=anchor)
 
 ```js
-let x={ 'default': {
+let x={
+		'default': {
           URL: 'stooges.com',
           throw_pies: true,
           stooges: {  larry: 'first_stooge',
