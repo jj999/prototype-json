@@ -39,7 +39,7 @@ let customer={
   },
   billing_details:  {   phone_numbers: {
 			work: '678'
-						},
+		},
                         DEEP_PARENT:  'shipping_details' 
   }
 }
