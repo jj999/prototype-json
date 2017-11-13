@@ -9,7 +9,7 @@
 - prototypeJSON(o, options)  - takes two arguments - object name and options; it updates prototypes of object o
 - options and defaults:
 ```js
-{
+let options = {
   deepParent: 'DEEP_PARENT',		//deep parent property name
   shallowParent: 'SHALLOW_PARENT',	//shallow parent property name
   warningAlreadyAssignedF: false,	//if warning should be displayed for already assigned child prototype
@@ -39,7 +39,7 @@ let customer={
   },
   billing_details:  {   phone_numbers: {
 			work: '678'
-		},
+			},
                         DEEP_PARENT:  'shipping_details' 
   }
 }
