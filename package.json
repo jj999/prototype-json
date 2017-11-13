@@ -1,6 +1,6 @@
 {
-  "name": "prototypize-json",
-  "version": "1.0.0",
+  "name": "prototype-json",
+  "version": "2.1.0",
   "description": "Library to add prototypal inheritance to JSON object",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jj999/prototypize-json.git"
+    "url": "git+https://github.com/jj999/prototype-json.git"
   },
   "keywords": [
     "prototypal",
@@ -19,7 +19,7 @@
   "author": "Jan Andrejkovic <jandrejk@gmail.com> (http://www.tremende.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jj999/prototypize-json/issues"
+    "url": "https://github.com/jj999/prototype-json/issues"
   },
-  "homepage": "https://github.com/jj999/prototypize-json#readme"
+  "homepage": "https://github.com/jj999/prototype-json#readme"
 }
